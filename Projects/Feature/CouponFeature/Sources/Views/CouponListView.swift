@@ -14,7 +14,7 @@ struct CouponListView: View {
 
     var body: some View {
         List {
-            ForEach(coupons, id: \.name) { coupon in
+            ForEach(coupons, id: \.id) { coupon in
                 CouponRowView(coupon: coupon, onAction: onAction)
                 .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
 

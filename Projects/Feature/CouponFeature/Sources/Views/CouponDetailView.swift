@@ -11,12 +11,10 @@ import Domain
 import CoreKit
 
 public struct CouponDetailView: View {
-    private var router: RoutingProtocol
     let coupon: CouponEntity
     
-    public init(coupon: CouponEntity, router: RoutingProtocol) {
+    public init(coupon: CouponEntity) {
         self.coupon = coupon
-        self.router = router
     }
     
     public var body: some View {
@@ -26,7 +24,7 @@ public struct CouponDetailView: View {
                 HStack {
                     Spacer()
                     Button(action: {
-                        router.navigate(.pop, route: router)
+                        // router.navigate(.pop, route: router)
                     }) {
                         Image(systemName: "xmark")
                             .foregroundColor(.black)
